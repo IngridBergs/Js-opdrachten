@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel=stylesheet type="text/css">
+  <title>Exercise 09</title>
+</head>
+<body>
+  <div class="container">
+     <button type="button" onclick="testWhile()" width="400">Roep de testWhile() functie aan</button>
+     <script>
+
+      /*Oefening 9 - Gebruik maken van de while-lus
+
+      Maak een knop. Wanneer op deze knop wordt geklikt, start u de testWhile() functie.
+
+      Deze functie vraagt de gebruiker om een string in te voeren die de letter p bevat, en
+      vraagt dit net zo lang totdat de gebruiker dit heeft gedaan. Vervolgens wordt de in
+      aanhalingstekens ingevoerde tekenreeks weergegeven.*/
+
+      /*This method is used to return the position of the first occurrence of a specified value inside a string variable.
+      The return value of this method is -1 in case the specified value is not found.
+      The indexOf() method is case sensitive.*/
+
+      /*if (testString.indexOf('p') > -1)
+      {
+        alert("We hebben een p gevonden in je string");
+      }*/
+
+      function testWhile(){
+
+          var testString = prompt("Voer een string in die de letter p bevat aub:");
+          while (testString.indexOf("p") <= -1)
+          {
+               testString = prompt("Voer een string in die de letter p bevat aub:");
+          }
+          console.log(testString);
+    }
+
+      </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel=stylesheet type="text/css">
+  <title>Exercise 04</title>
+</head>
+<body>
+  <div class="container">
+      <button type="button" onclick="display()" width="400">Roep de display functie aan</button>
+      <script type="text/javascript">
+
+     /* Oefening 4 - gebruik van een array
+
+      Maak een array genaamd tab waarvan het eerste element -2 is, het tweede 1 en het derde 4
+      Creëer een add functie die een argument x neemt en het resultaat van de optelling van x met 2 terug geeft.
+      Creëer een display functie, aangeroepen wanneer er op een knop wordt geklikt, die in achtereenvolgende
+      waarschuwingsvakken het resultaat van add weergeeft met het eerste element,
+      dan op het laatste element van de array. (Maak gebruik van de lengte eigenschap).*/
+
+
+    var tab = [-2,1,4];
+
+    function add(x){
+        return x+2;
+    }
+    function display(){
+        for (var i=0; i < tab.length; i++){
+            if((tab[i]%2)===0){
+                alert(add(tab[i]));
+            }
+        }
+    }
+
+      </script>
+  </div>
+</body>
+</html>

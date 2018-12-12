@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel=stylesheet type="text/css">
+  <title>Exercise 11</title>
+</head>
+<body>
+  <div class="container">
+      <button type="button"  onclick="calcAverage()" width="400">Roep de calcAverage functie aan</button>
+      <script type="text/javascript">
+
+      /*Oefening 11 - Maak gebruik van lussen
+
+      Maak een knop. Wanneer op deze knop wordt geklikt, start de calcAverage() functie.
+
+      Deze functie berekent het gemiddelde van de getallen die in een alert worden ingevoerd.
+
+          Vraag de gebruiker om een geheel getal in te voeren.
+          Als de gebruiker iets anders dan een geheel getal invoert, geef via een alert() de fout aan
+          en vraag de gebruiker om opnieuw een geheel getal in te voeren.
+
+          Zolang het ingevoerde getal positief of nul is, slaat de functie dit getal op en
+          voegt het toe aan de andere eerder ingevoerde getallen.
+
+          Als het getal positief is, berekent de functie het gemiddelde van alle ingevoerde
+          getallen door de totale som te delen door het aantal ingevoerde waarden.
+          de functie geeft het aantal ingevoerde waarden weer
+          de functie geeft het gemiddelde weer*/
+
+
+
+          let totalNumbers = 0;
+          let counter = 0;
+          let average = 0;
+
+          function calcAverage(){
+              let numberUser = parseInt(prompt("Geef aub een geheel getal in: "));
+             // while(numberUser.indexOf(".") !== -1){
+             while(!Number.isInteger(numberUser)){
+                  numberUser = parseInt(prompt("Geef aub een geheel getal in: "));
+              }
+              if(numberUser >= 0){
+                  totalNumbers += numberUser;
+                  counter++;
+                  average=totalNumbers/counter;
+              }
+             console.log("Het gemiddelde bedraagt: " + average) ;
+          }
+          </script>
+  </div>
+</body>
+</html>

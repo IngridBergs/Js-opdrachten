@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel=stylesheet type="text/css">
+  <title>Exercise 07</title>
+</head>
+<body>
+  <div class="container">
+     <button type="button"  onclick="makeChoice()" width="400">Roep de display functie aan</button>
+     <script type="text/javascript">
+
+      /*Oefening 7 - Maak gebruik van switch
+
+      Maak een knop. Wanneer u op deze knop klikt, start u de functie makeChoice().
+
+      Deze functie vraagt de gebruiker door middel van een prompt() te kiezen tussen 1, 2 of 3.
+
+          als hij voor 1 kiest, tonen we met een alert: "1. Thank you".
+          als hij er 2 kiest, tonen we met een alert: "2. Hello"
+          als hij er 3 kiest, tonen we met een alert: "3. Good bye".
+          als hij iets anders kiest, posten we met een alert: "Excuse me, what do you want?*/
+
+          function makeChoice(){
+              var choiceUser = parseInt(prompt ("Kies aub tussen 1,2 of 3"));
+              switch(choiceUser){
+                  case 1:
+                  alert("Thank you");
+                  break;
+                  case 2:
+                  alert("Hello");
+                  break;
+                  case 3:
+                  alert("Good bye");
+                  break;
+                  default:
+                  alert("Excuse me, what do you want?");
+              }
+        }
+      </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel=stylesheet type="text/css">
+  <title>Exercise 12</title>
+</head>
+<body>
+  <div class="container">
+      <script>
+     /*Oefening 12 - Celsius, Fahrenheit en Kelvin temperatuurconversie*/
+
+
+     //opmerkingen bij huidige code
+     //maak veel vaker gebruik van returns
+     //zet geen functie oproep in je console.console.log
+     //zet niet gewoon een string in het ijle, zet Conversion Celsius to Fahrenheit in een variabele let titleConversion
+
+
+var choiceUser = parseInt(prompt("Welke omzetting/conversie wil je uitvoeren aub? Maak een keuze van 1 tot en met 6"));
+var tempToConvert = prompt("Welke temperatuur zou je willen converteren aub?");
+
+//maak hier allemaal functies van aan , roep die apart aan
+function tempConversion(tempToConvert){
+    let titleConversion = "";
+    switch (choiceUser){
+        case 1 :
+        titleConversion = "Conversion  Celsius to Fahrenheit";
+        var result = convCelsToFahr(tempToConvert);
+        console.log(titleConversion + " en temperatuur " + tempToConvert + " is :" + result);
+        break;
+
+        case 2 :
+        titleConversion = "Conversion  Celsius to Kelvin";
+        var result = convCelsToKel(tempToConvert);
+        console.log(titleConversion + " en temperatuur " + tempToConvert + " is :" + result);
+        break;
+
+        case 3 :
+        titleConversion = "Conversion  Fahrenheit to Celsius";
+        var result = convFahrToCels(tempToConvert);
+        console.log(titleConversion + " en temperatuur " + tempToConvert + " is :" + result);
+        break;
+
+        case 4 :
+        titleConversion = "Conversion  Fahrenheit to Kelvin";
+        var result = convFahrToKel(tempToConvert);
+        console.log(titleConversion + " en temperatuur " + tempToConvert + " is :" + result);
+        break;
+
+        case 5 :
+        titleConversion = "Conversion  Kelvin to Celsius";
+        var result = convKelToCels(tempToConvert);
+        console.log(titleConversion + " en temperatuur " + tempToConvert + " is :" + result);
+        break;
+
+        case 6 :
+        titleConversion = "Conversion  Kelvin to Fahrenheit";
+        var result = ConvKelToFahr(tempToConvert);
+        console.log(titleConversion + " en temperatuur " + tempToConvert + " is :" + result);
+        break;
+
+        default :
+        titleConversion = "End of the program";
+        }
+}
+
+function convCelsToFahr(x){
+    //[°F] = ([°C] x 9/5) + 32
+    return (x* 9/5) + 32;
+}
+
+function convCelsToKel(x){
+    //[K] = [°C] + 273,15
+    return x + 273,15;
+}
+
+function convFahrToCels(x){
+    //[°C] = ([°F] - 32) / (9/5)
+    return (x - 32)/(9/5);
+}
+
+function convFahrToKel(x){
+    //[K] = (([°F] - 32) x (5/9)) + 273,15
+    return (x - 32)* 5/9 + 273.15;
+}
+
+function convKelToCels(x){
+    //[°C] = [K] - 273,15
+
+    return x = Math.ceil(x - 273.15);
+}
+
+function ConvKelToFahr(x){
+    //[°F] = ([K] x 9/5) - 459,67
+
+    return x= Math.ceil((x*(9/5))-459.67);
+}
+
+//console.log("Het resultaat voor je conversie van " + choiceUser + " en temperatuur " + tempToConvert + " is :" + convKelToCels(tempToConvert));
+//console.log("Het resultaat voor je conversie van " + choiceUser + " en temperatuur " + tempToConvert + " is :" + ConvKelToFahr(tempToConvert));
+//console.log("Het resultaat voor je conversie van " + choiceUser + " en temperatuur " + tempToConvert + " is :" + convFahrToKel(tempToConvert));
+//console.log("Het resultaat voor je conversie van " + choiceUser + " en temperatuur " + tempToConvert + " is :" + tempConversion(tempToConvert));
+      </script>
+  </div>
+</body>
+</html>

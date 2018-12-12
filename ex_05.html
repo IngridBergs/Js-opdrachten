@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel=stylesheet type="text/css">
+  <title>JExercise 05</title>
+</head>
+<body>
+  <div class="container">
+      <script type="text/javascript">
+
+
+      /*b is altijd geïnitialiseerd met de waarde 2. Wat is het resultaat van de volgende operaties?
+
+         1)  a=b++;
+         2) a=++b;
+         3) a=b--;
+         4)  a=--b;
+         5) a+=b++;
+         6) a=1; a+=++b;
+         7) a=1; a-=b++;
+         8) a=1; a-=++b;
+         9) a=1; a+=b--;
+         10)a=1; a+=--b;
+
+      Geef voor elk van de bewerkingen de uitgevoerde formule, de waarde van a na de bewerking en de waarde van b na de bewerking weer.*/
+
+//oef 1
+     var opdracht=" a=b++";
+     var a=1;
+     var b=2;
+     a=b++;
+
+
+     //b=b+1 dus  b krijgt waarde 3
+     //a=2
+     //b=3
+
+     alert("Oef1: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+//oef 2
+        var opdracht="a=++b";
+        var a=1;
+        var b=2;
+        a=++b;
+
+        alert("Oef2: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+//oef 3
+        var opdracht="a=b--;";
+        var a=1;
+        var b=2;
+        a=b--;
+
+        alert("Oef3: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+
+//oef 4
+        var opdracht="a=--b";
+        var a=1;
+        var b=2;
+        a=--b;
+
+        alert("Oef4: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+//oef 5
+        var opdracht=" a+=b++";
+
+        //tussenstappen
+        //var a
+        //+=
+        //var b
+        //++
+
+        //a+=b
+        //b++
+
+        //a=a+b    a=3
+        //b=b+1    b=3
+
+        var a=1;
+        var b=2;
+        a+=b++;
+
+        alert("Oef5: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+      //oef 6
+        var opdracht="a+=++b";
+        var a=1;
+        var b=2;
+        a+=++b;
+        alert("Oef6: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+      //oef 7
+        var opdracht="a-=b++";
+        var a=1;
+        var b=2;
+        a-=b++;
+
+        alert("Oef7: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+    //oef 8
+        var opdracht="a-=++b";
+        var a=1;
+        var b=2;
+        a-=++b;
+
+        alert("Oef8: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+    //oef 9
+        var opdracht="a+=b--";
+        var a=1;
+        var b=2;
+        a+=b--;
+
+        alert("Oef9: de waarde van a is: " + a + " en de waarde van b is: " + b);
+
+
+    //oef 10
+        var opdracht="a+=--b";
+        var a=1;
+        var b=2;
+        a+=--b;
+
+        alert("Oef10: de waarde van a is: " + a + " en de waarde van b is: " + b);
+      </script>
+  </div>
+</body>
+</html>

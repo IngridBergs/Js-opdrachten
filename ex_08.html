@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel=stylesheet type="text/css">
+  <title>JS oefeningen allerlei</title>
+</head>
+<body>
+  <div class="container">
+     <button type="weekday"  onclick="weekday()" width="400">Roep de weekday functie aan</button>
+     <script>
+
+      /*Oefening 8 - Gebruik maken van de switch en het datumobject
+
+      Maak een knop. Wanneer op deze knop wordt geklikt, start de weekday() functie.
+      Deze functie bepaalt de dag van de week en toont de waarde zondag, maandag,
+      dinsdag, dinsdag, enz. tot zaterdag.*/
+
+
+      function weekday(){
+          let dag = new Date().getDay();
+          console.log(dag);
+
+          switch(new Date().getDay()){
+              case 1:
+              dag = "maandag";
+              break;
+              case 2:
+              dag = "dinsdag";
+              break;
+              case 3:
+              dag = "woensdag";
+              break;
+              case 4:
+              dag = "donderdag";
+              break;
+              case 5:
+              dag = "vrijdag";
+              break;
+              case 6:
+              dag= "zaterdag";
+              break;
+              default:
+              dag = "zondag";
+          }
+          console.log("Vandaag is het " + dag);
+      }
+      </script>
+  </div>
+</body>
+</html>

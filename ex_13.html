@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel=stylesheet type="text/css">
+  <title>Exercise 13  </title>
+</head>
+<body>
+  <div class="container">
+     <button type="button"  onclick="calcBMI ()" width="400">Roep de calcBMI functie aan</button>
+     <script>
+     /* Oefening 13 - Berekening van de BMI
+
+      De BMI of Body Mass Index wordt gebruikt om de gezondheidsrisico's van volwassenen met overgewicht te beoordelen.
+      Deze wordt berekend door het gewicht uitgedrukt in kg te delen door het kwadraat van de hoogte uitgedrukt in meters.
+
+
+      Afhankelijk van de verkregen waarde kan de corpulentie als volgt worden geschat:
+
+      - Minder dan 16,5: ondervoeding of hongersnood
+      - 16,5 <= BMI <18,5 : dunheid
+      - 18,5 <= BMI <= BMI < 25 : normale bouw
+      - 25 <= BMI <30 : overgewicht
+      - 30 <= BMI <= BMI < 35 : matige overgewicht
+      - 35 <= BMI <40 : ernstige overgewicht
+      - meer dan 40: morbide obesitas
+
+      Maak een knop. Wanneer op deze knop wordt geklikt, start de calcBMI functie.
+
+      Deze functie vraagt om een gewicht en een hoogte, bereken daarmee de BMI, geef deze waarde met 2
+      decimalen weer en geeft tenslotte een bericht weer waarin staat in welke gewichtklasse u valt.
+      */
+
+
+      //how to round a float , 2 decimals
+
+      /*function round(value, decimals) {
+          return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+      }
+
+      round(1.005, 2); // return 1.01
+
+      round(1.004, 2); // return 1 instead of 1.00*/
+
+
+
+      function calcBMI(){
+          let uitslag = "";
+          let weight = parseFloat(prompt("Wat is je gewicht aub,  uitgedrukt in kg? : "));
+          let height = parseFloat(prompt("Wat is je lengte aub, uitgedrukt in m? : "));
+          console.log("Mijn gewicht is :" + weight + " kg");
+          console.log("Mijn lengte is :" + height + " m");
+          let bmi = (weight/Math.pow(height, 2));
+          console.log(bmi);
+
+
+          if(bmi < 16.5){
+              uitslag = "ondervoeding of hongersnood";
+          }
+          else if(bmi >= 16.5 && bmi < 18.5){
+              uitslag = "dunheid";
+          }
+          else if(bmi>= 18.5 && bmi < 25){
+              uitslag = "normale bouw";
+          }
+          else if(bmi>= 25 && bmi < 30){
+              uitslag = "overgewicht";
+          }
+          else if(bmi >= 30 && bmi < 35){
+              uitslag = "matige overgewicht";
+          }
+          else if(bmi >= 35 && bmi < 40){
+              uitslag = "ernstig overgewicht";
+          }
+          else{
+              uitslag = "morbide obesitas";
+          }
+          console.log("Uw bmi vertoont volgend resultaat: " + uitslag);
+      }
+
+
+
+
+     /* - Minder dan 16,5: ondervoeding of hongersnood
+      - 16,5 <= BMI <18,5 : dunheid
+      - 18,5 <= BMI <= BMI < 25 : normale bouw
+      - 25 <= BMI <30 : overgewicht
+      - 30 <= BMI <= BMI < 35 : matige overgewicht
+      - 35 <= BMI <40 : ernstige overgewicht
+      - meer dan 40: morbide obesitas*/
+      </script>
+  </div>
+</body>
+</html>
